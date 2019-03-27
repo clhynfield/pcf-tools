@@ -1,8 +1,19 @@
-# Fiddle with Linux
+# PCF Tools
 
 ## Run
 
-docker run --interactive --tty --volume ~/workspace:/workspace fiddle-ubuntu:latest
+Interactively:
+
+```shell
+docker run --interactive --tty --volume .:/workspace pcf-tools:latest
+```
+
+As individual command-line utilities:
+
+```shell
+alias om="docker run --volume $(pwd):/workspace --rm pcf-tools:latest om"
+om apply-changes
+```
 
 ## Make
 
