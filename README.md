@@ -5,7 +5,7 @@
 Interactively:
 
 ```shell
-docker run --interactive --tty --volume .:/workspace pcf-tools:latest
+docker run --interactive --tty --volume $(pwd):/workspace pcf-tools:latest
 ```
 
 As individual command-line utilities:
